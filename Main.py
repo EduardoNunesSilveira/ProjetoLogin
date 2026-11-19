@@ -1,6 +1,8 @@
 
 import customtkinter as ctk
 from Telas import TelaLogin
+from Telas import TelaMenu
+from Funcoes import validar_login
 
 ctk.set_appearance_mode("dark")
 
