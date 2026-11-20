@@ -4,12 +4,17 @@
 
 import customtkinter as ctk
 from Funcoes import validar_login
+from Funcoes import Cadastrar_usuario
+from Funcoes import Voltar_Login
+
+
+
 
 def TelaLogin(Main):
 
     frame = ctk.CTkFrame(Main)
 
-    frame.pack(
+    frame.pack( 
         fill="both",
         expand=True,
         padx=0,
@@ -54,7 +59,7 @@ def TelaLogin(Main):
         command=lambda: validar_login(
             entry_usuario,
             entry_senha,
-            resultado,
+            resultado,      
             frame,
             Main
         )
@@ -66,8 +71,18 @@ def TelaLogin(Main):
    
     botao_cad_usuario = ctk.CTkButton(
         frame,
-        text="CADASTRAR USUÁRIO"
+        text="CADASTRAR USUÁRIO",
+        command=lambda:Cadastrar_usuario(
+            frame,
+            Main
+        )
     )
     botao_cad_usuario.pack(pady=15)
+
+
+ 
+
+
+
 
     return frame

@@ -1,5 +1,6 @@
 import customtkinter as ctk
 
+
 def TelaMenu(Main):
 
     frame = ctk.CTkFrame(Main)
